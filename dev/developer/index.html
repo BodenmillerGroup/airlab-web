@@ -1,0 +1,768 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://bodenmillergroup.github.io/airlab-web/dev/developer/">
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+    
+    
+      
+        <title>Developer documentation - AirLab</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#developer-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AirLab" class="md-header__button md-logo" aria-label="AirLab" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AirLab
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Developer documentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/BodenmillerGroup/airlab-web/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Development
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AirLab" class="md-nav__button md-logo" aria-label="AirLab" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    AirLab
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/BodenmillerGroup/airlab-web/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      <label class="md-nav__link" for="__nav_1">
+        Home
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Welcome
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        License
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Development
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Development" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Developer documentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Developer documentation
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-deployment" class="md-nav__link">
+    Development deployment
+  </a>
+  
+    <nav class="md-nav" aria-label="Development deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#staging-deployment" class="md-nav__link">
+    Staging deployment
+  </a>
+  
+    <nav class="md-nav" aria-label="Staging deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_1" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-deployment" class="md-nav__link">
+    Production deployment
+  </a>
+  
+    <nav class="md-nav" aria-label="Production deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparing-production-docker-images" class="md-nav__link">
+    Preparing production Docker images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation_2" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-deployment" class="md-nav__link">
+    Development deployment
+  </a>
+  
+    <nav class="md-nav" aria-label="Development deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#staging-deployment" class="md-nav__link">
+    Staging deployment
+  </a>
+  
+    <nav class="md-nav" aria-label="Staging deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_1" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-deployment" class="md-nav__link">
+    Production deployment
+  </a>
+  
+    <nav class="md-nav" aria-label="Production deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparing-production-docker-images" class="md-nav__link">
+    Preparing production Docker images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation_2" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/BodenmillerGroup/airlab-web/edit/master/docs/dev/developer.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="developer-documentation">Developer documentation</h1>
+<h2 id="getting-started">Getting Started</h2>
+<p>AirLab application is split into four separate packages:</p>
+<ul>
+<li><strong>shared</strong>: common package used by other three packages.</li>
+<li><strong>backend</strong>: main API gateway. Deployed in a separate container.</li>
+<li><strong>worker</strong>: background worker that handles long-running tasks, like sending emails. Deployed in a separate container.</li>
+<li><strong>frontend</strong>: front-end Vue application, served as a static content by nginx server.</li>
+</ul>
+<p>There are other services deployed together with AirLab application:</p>
+<ul>
+<li>Postgres database</li>
+<li>Redis (cache/pub-sub)</li>
+<li>RabbitMQ (job queue)</li>
+<li>Traefik (load-balancer)</li>
+<li>pgAdmin (Postgres admin app)</li>
+<li>RedisInsight (Redis admin app)</li>
+<li>Portainer (Docker admin app)</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Services configuration is defined in <code>.deploy/shared.yml</code> file. Please also check <code>.deploy/development.yml</code>, <code>.deploy/production.yml</code> or <code>.deploy/staging.yml</code> depending on your deployment scenario.</p>
+</div>
+<p>Three deployment configurations are available by default: <code>development</code>, <code>staging</code> and <code>production</code>.
+It is highly recommended to use <code>make</code> commands (see <code>Makefile</code> for available options) to manage all tasks.</p>
+<p>By default, there is a <a href="https://github.com/BodenmillerGroup/airlab-web/blob/master/.env.template">.env.template</a> file in the repo with default values.
+Please rename it to <code>.env</code> and set all environment variables values according to your needs and server configuration.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code>.env</code> file is ignored by Git in order to avoid putting sensitive information to Git repository!</p>
+</div>
+<p>As you can see, some variables values are duplicated across several env variables.
+This is due to some existing limitations: for instance, in order for a Webpack bundler to inject env variable values into the compiled Vue front-end application, they should have a prefix <code>VUE_APP_</code>.
+This could be improved in the future for sure.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Main setting you should care about is <code>DOMAIN</code> environment variable. In case of local development (with hot-reloading dev proxy server) it should be set to <code>localhost</code>.</p>
+</div>
+<ul>
+<li><a href="https://github.com/BodenmillerGroup/airlab-web/blob/master/.env.template">.env.template</a></li>
+</ul>
+<h2 id="development-deployment">Development deployment</h2>
+<p>Local development deployment supports debugging and hot-reloading both on back-end and front-end. To get a local development instance up and running please follow the following steps.</p>
+<p>Recommended and tested environment for development and deployment is Ubuntu Linux distribution. If you are going to use another OS or distribution please make changes accordingly. Make sure that the following tools are installed globally on your machine:</p>
+<ul>
+<li><a href="https://docs.docker.com/engine/install/ubuntu/">Docker</a></li>
+<li><a href="https://docs.docker.com/compose/install/">Docker Compose</a></li>
+<li><a href="https://github.com/nodesource/distributions/blob/master/README.md#debinstall">Node.js LTS</a></li>
+<li><a href="https://classic.yarnpkg.com/en/docs/install#debian-stable">Yarn Classic (v1)</a></li>
+<li><a href="https://lerna.js.org/#getting-started">Lerna</a></li>
+</ul>
+<h3 id="installation">Installation</h3>
+<p>Clone the AirLab repo</p>
+<pre><code class="language-sh">git clone https://github.com/BodenmillerGroup/airlab-web.git
+</code></pre>
+<p>Install all necessary NPM packages on your local machine</p>
+<pre><code class="language-sh">make bootstrap
+</code></pre>
+<p>Deploy development Docker containers locally </p>
+<pre><code class="language-sh">make deploy-development
+</code></pre>
+<p>Run database migrations to initialize database </p>
+<pre><code class="language-sh">make db-migration
+</code></pre>
+<p>One can access locally deployed version of AirLab at <a href="http://localhost">http://localhost</a>.</p>
+<p>Run development version of front-end app (with automatic hot-reloading).</p>
+<pre><code class="language-sh">make serve-frontend
+</code></pre>
+<p>One can access locally deployed version of AirLab with hot-reloading and debugging capabilities at <a href="http://localhost:9999">http://localhost:9999</a>.
+Please keep in mind that this functionality is only supported on local machines with <code>DOMAIN</code> env variable set to <code>localhost</code>!</p>
+<h2 id="staging-deployment">Staging deployment</h2>
+<p><code>staging</code> build is used to test production build of AirLab in environment similar to <code>production</code> environment, but it runs on a separate test server.
+The difference is another domain name address.</p>
+<p>Unlike production deployment, staging deployment doesn't require pre-build Docker images as it will build them during deployment process.</p>
+<h3 id="installation_1">Installation</h3>
+<p>Clone the AirLab repo</p>
+<pre><code class="language-sh">git clone https://github.com/BodenmillerGroup/airlab-web.git
+</code></pre>
+<p>Later on you can update the repo by running:</p>
+<pre><code class="language-sh">git pull
+</code></pre>
+<p>Rename <code>.env.template</code> file in the root repo folder to <code>.env</code> and set all environment variables values accordingly to staging configuration. (Usually it should be done only once as <code>.env</code> file is ignored by Git and it won't be overwritten by <code>git pull</code> command).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please check that env variable <code>DOMAIN</code> is properly set in <code>.env</code> file on staging server before deployment!</p>
+</div>
+<p>Build and deploy Docker containers on the staging server:</p>
+<pre><code class="language-sh">make deploy-staging
+</code></pre>
+<h2 id="production-deployment">Production deployment</h2>
+<h3 id="preparing-production-docker-images">Preparing production Docker images</h3>
+<p>Production deployment requires pre-build production Docker images to be available. Images names are defined by the following env variables:</p>
+<ul>
+<li>DOCKER_IMAGE_BACKEND</li>
+<li>DOCKER_IMAGE_WORKER</li>
+<li>DOCKER_IMAGE_FRONTEND</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>It is strongly recommended to use tagged Docker images in production deployment scenario to enforce stability! <code>DOCKER_TAG</code> env variable in <code>.env</code> file defines Docker image tag used during build and deployment. </p>
+</div>
+<p>In order to build these images and then push them to Docker image registry (e.g. Docker Hub), run the following command in your development environment:</p>
+<pre><code class="language-sh">make build-push
+</code></pre>
+<p>This operation should be done each time you are planning to release new production version.</p>
+<h3 id="installation_2">Installation</h3>
+<p>As soon as Docker images are build and published to a registry, one can deploy production version of AirLab by running the following commands on a production server:</p>
+<p>Clone the AirLab repo</p>
+<pre><code class="language-sh">git clone https://github.com/BodenmillerGroup/airlab-web.git
+</code></pre>
+<p>Later on you can update the repo by running:</p>
+<pre><code class="language-sh">git pull
+</code></pre>
+<p>Rename <code>.env.template</code> file in the root repo folder to <code>.env</code> and set all environment variables values accordingly to production configuration. (Usually it should be done only once as <code>.env</code> file is ignored by Git and it won't be overwritten by <code>git pull</code> command).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please check that env variable <code>DOMAIN</code> is properly set in <code>.env</code> file on production server before deployment!</p>
+</div>
+<p>Deploy production Docker containers </p>
+<pre><code class="language-sh">make deploy-production
+</code></pre>
+<p>Run database migrations to initialize database (usually should be used only once during first deployment).</p>
+<pre><code class="language-sh">make db-migration
+</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Production deployment doesn't support debugging and hot-reloading because it is compiled to minimize bundle size and optimize performance. </p>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../license/" class="md-footer__link md-footer__link--prev" aria-label="Previous: License" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              License
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 Anton Rau
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.76f349be.min.js"></script>
+      
+    
+  </body>
+</html>
